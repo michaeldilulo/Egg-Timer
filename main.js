@@ -101,7 +101,7 @@ const startMediumBoilEgg = () => {
             minutesToSecondsElem.innerText = 'Seconds Remaining'
             eggMinutesRemainingElem.innerText = widthRemaining.toString();
             document.getElementById('progressBar').style.width = widthRemaining-- + '%';
-            if (widthRemaining <= -1) {
+            if (widthRemaining <= 0) {
                 eggMinutesRemainingElem.innerText = 'Your eggs are'
                 minutesToSecondsElem.innerText = 'Done!'
                 eggMinutesRemainingElem.style.color = 'red'
@@ -153,7 +153,7 @@ const startHardBoilEgg = () => {
             minutesToSecondsElem.innerText = 'Seconds Remaining'
             eggMinutesRemainingElem.innerText = widthRemaining.toString();
             document.getElementById('progressBar').style.width = widthRemaining-- + '%';
-            if (widthRemaining <= -1) {
+            if (widthRemaining <= 0) {
                 eggMinutesRemainingElem.innerText = "Your eggs are"
                 minutesToSecondsElem.innerText = "Done!"
                 eggMinutesRemainingElem.style.color = 'red'
