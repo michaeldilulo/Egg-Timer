@@ -15,6 +15,24 @@ const softEggBoil = () => {
     eggTypeSelectedElem.innerText = softEggSelectedElem;
     eggTypeSelectedElem.style.color = 'red';
     eggMinutesRemainingElem.innerText = softBoilEgg.toString();
+    startSoftBoilEgg();
+}
+
+const mediumEggBoil = () => {
+    eggTypeSelectedElem.innerText = mediumEggSelectedElem;
+    eggTypeSelectedElem.style.color = 'red';
+    eggMinutesRemainingElem.innerText = mediumBoilEgg.toString();
+    startMediumBoilEgg();
+}
+
+const hardEggBoil = () => {
+    eggTypeSelectedElem.innerText = hardEggSelectedElem;
+    eggTypeSelectedElem.style.color = 'red';
+    eggMinutesRemainingElem.innerText = hardBoilEgg.toString();
+    startHardBoilEgg();
+}
+
+const startSoftBoilEgg = () => {
     setInterval(() => {
         eggMinutesRemainingElem.innerText = (softBoilEgg-- - 60000 / 60000).toString();
         if (softBoilEgg >= 6) {
@@ -29,15 +47,15 @@ const softEggBoil = () => {
             document.getElementById('progressBar').style.backgroundColor = 'green'
             document.getElementById('progressBar').style.width = width - 60 + '%';
         } else if (softBoilEgg === 2) {
-            document.getElementById('progressBar').style.backgroundColor = 'black'
+            document.getElementById('progressBar').style.backgroundColor = 'red'
             document.getElementById('progressBar').style.width = width - 80 + '%';
         } else if (softBoilEgg === 1) {
-            document.getElementById('progressBar').style.backgroundColor = 'red'
+            document.getElementById('progressBar').style.backgroundColor = 'black'
         } else if (softBoilEgg < 1) {
             minutesToSecondsElem.innerText = 'Seconds Remaining'
             eggMinutesRemainingElem.innerText = widthRemaining.toString();
             document.getElementById('progressBar').style.width = widthRemaining-- + '%';
-            if (widthRemaining <= -1) {
+            if (widthRemaining <= 0) {
                 eggMinutesRemainingElem.innerText = "Your eggs are"
                 minutesToSecondsElem.innerText = "Done!"
                 eggMinutesRemainingElem.style.color = 'red'
@@ -47,10 +65,7 @@ const softEggBoil = () => {
     }, 60000)
 }
 
-const mediumEggBoil = () => {
-    eggTypeSelectedElem.innerText = mediumEggSelectedElem;
-    eggTypeSelectedElem.style.color = 'red';
-    eggMinutesRemainingElem.innerText = mediumBoilEgg.toString();
+const startMediumBoilEgg = () => {
     setInterval(() => {
         eggMinutesRemainingElem.innerText = (mediumBoilEgg-- - 60000 / 60000).toString();
         if (mediumBoilEgg >= 10) {
@@ -96,10 +111,7 @@ const mediumEggBoil = () => {
     }, 60000)
 }
 
-const hardEggBoil = () => {
-    eggTypeSelectedElem.innerText = hardEggSelectedElem;
-    eggTypeSelectedElem.style.color = 'red';
-    eggMinutesRemainingElem.innerText = hardBoilEgg.toString();
+const startHardBoilEgg = () => {
     setInterval(() => {
         eggMinutesRemainingElem.innerText = (hardBoilEgg-- - 60000 / 60000).toString();
         if (hardBoilEgg >= 12) {
