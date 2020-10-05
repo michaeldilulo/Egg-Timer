@@ -22,3 +22,7 @@ i {
 #egg-type-selected {
     color: blue
 }
+
+.progress-bar {
+    width: 100%;
+}
