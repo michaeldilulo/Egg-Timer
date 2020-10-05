@@ -1,0 +1,24 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #7acef5;
+}
+
+p {
+    font-size: 22px;
+}
+
+i {
+    font-size: 36px;
+}
+
+.progress {
+    height: 30px;
+}
+
+.mobile-egg-icon {
+    font-size: 100px;
+}
+
+#egg-type-selected {
+    color: blue
+}

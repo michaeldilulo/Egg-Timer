@@ -4,11 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Egg Timer</title>
 </head>
 
 <body>
 
+    <header>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="egg-title">
+                    <h1 class="col-md-12 d-flex justify-content-center mt-5 text-light">Egg Timer</h1>
+                    <p class="col-md-12 d-flex justify-content-center mt-3 text-light"><i
+                            class="fas fa-egg mr-4 d-none d-lg-block text-warning"></i>The
+                        perfect
+                        application to boil<i class="fas fa-egg ml-4 d-none d-lg-block text-warning"></i></p>
+                    <p class="d-flex justify-content-center text-light">eggs to perfection!</p>
+                    <i
+                        class="fas fa-egg d-flex justify-content-center text-warning d-block d-md-none mobile-egg-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-md-4 d-flex justify-content-center mt-3 mb-3">
+                    <button class=" btn btn-lg btn-danger" onclick="softEggBoil()">Soft Boil</button>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center mt-3 mb-3">
+                    <button class=" btn btn-lg btn-success" onclick="mediumEggBoil()">Medium Boil</button>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center mt-3 mb-3">
+                    <button class=" btn btn-lg btn-secondary" onclick="hardEggBoil()">Hard Boil</button>
+                </div>
+            </div>
+            <h3 class="mt-3">Time Remaining: <br> <span id="eggMinutesRemaining">0</span> Minutes</h3>
+            <div class="progress mt-3 mb-3">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h3 class="mt-3">Egg Type Selected: <br> <span id="eggTypeSelected"></span></h3>
+        </div>
+
+
+    </main>
+
+    <footer></footer>
+
+
+
+
+    <script src="https://kit.fontawesome.com/514cbcf0ae.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
